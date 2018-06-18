@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>converter</title>
+	<script type="text/javascript">
+	function con(){
+		 r2.value = (c.value=="kg-g")? parseInt(v1.value)*1000:(c.value=="g-kg")? parseInt(v1.value) /1000 : (c.value=="c-k")? parseInt(v1.value) +273: (c.value=="k-c")? parseInt(v1.value) -273: (c.value=="m-km")? parseInt(v1.value) *100 : (c.value=="km-m")? parseInt(v1.value)/100: '';
+ 
+	}
+	</script>
+</head>
+<body>
+	<table border="1" width="50%" height="50px">
+		<tr>
+			<td align="center">CONVERTER</td>
+		</tr>
+		<tr>
+			<td>
+				<select id="c">
+					<option value="kg-g">Mass(kg-g)</option>
+					<option value="g-kg">Mass(g-kg)</option>
+					<option value="c-k">Temp(c-k)</option>
+					<option value="k-c">Temp(k-c)</option>
+					<option value="m-km">Dist(kg-g)</option>
+					<option value="km-m">Dist(kg-g)</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="text" name="" id="v1">VALUE <br>
+				<input type="text" id="r2">RESULT<br>
+				<input type="button" align="center" value="Convert" onclick="con()">
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
